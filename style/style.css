@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 15px;
+}
+
+body {
+  background: hsl(233, 47%, 7%);
+}
+
+h1 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+}
+
+p {
+  font-family: "Inter", sans-serif;
+}
+
+.ctn {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/**CLASES**/
+
+/**PRIMERA PARTE**/
+
+.text-morado {
+  color: hsl(277, 64%, 61%);
+}
+
+.ctn-sec h3 {
+    font-family: "Inter", sans-serif;
+    color: hsl(0, 0%, 100%);
+    margin-bottom: 8px;
+    font-size: 1.5rem;
+}
+
+.ctn-sec p {
+  font-family: "Lexend Deca", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  font-size: 12.5px;
+  color: hsla(0, 0%, 100%, 0.6);
+}
+
+.ctn-sec {
+    display: flex;
+    margin-top: 70px;
+    margin-left: 70px;
+    margin-right: 90px;
+    justify-content: space-between;
+  }
+
+.ctn-p {
+  width: 1010px;
+  height: 421px;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-areas: "parte1 img";
+  background: hsl(244, 38%, 16%);
+  border-radius: 10px;
+}
+
+.texto-arriba {
+    width: 350px;
+    margin-top: 70px;
+    margin-left: 70px;
+  }
+  
+  .texto-arriba h1 {
+    margin-bottom: 20px;
+  }
+  
+  .texto-arriba p {
+    line-height: 25px;
+    color: hsla(0, 0%, 100%, 0.75);
+  }
+
+/**SEGUNDA PARTE**/
+
+.img-p {
+  grid-area: img;
+  border-radius: 0 10px 10px 0;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: multiply;
+}
+
+.ctn-sec1 {
+  grid-area: parte1;
+}
+
+.card-img {
+  position: relative;
+  background-color: hsl(277, 64%, 61%);
+  border-radius: 0 10px 10px 0;
+}
+
+.pink {
+  background-color: hsl(277, 64%, 61%);
+  width: 100%;
+  height: 100%;
+  border-radius: 0 10px 10px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.25;
+}
+
+
+/**MEDIA QUERIES**/
+
+@media screen and (max-width:768px){
+  .ctn-p {
+    margin-top: 40px;
+    width: 335px;
+    height: 800px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 30% 70%;
+    grid-template-areas: "img" "parte1";
+  }
+
+  .img-p {
+    grid-area: img;
+    border-radius: 7px 7px 0 0;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: multiply;
+  }
+  .card-img {
+    position: relative;
+    background-color: hsl(277, 64%, 61%);
+    border-radius: 7px 7px 0 0;
+    height: 100%;
+  }
+  .texto-arriba {
+    width: 300px;
+    text-align: center;
+    margin: auto;
+  }
+  
+  .texto-arriba h1{
+    margin-top: 25px;
+  }
+
+  .texto-arriba p {
+    margin: auto;
+    width:250px;
+    text-align: center;
+  }
+  .ctn-sec p {
+    color: hsla(0, 0%, 100%, 0.6);
+    margin-bottom: 25px;
+  }
+  
+  .ctn-sec {
+    margin: auto;
+      display: flex;
+      flex-direction: column;
+      margin-top: 25px;
+      align-items: center;
+    }
+    .ctn-sec h3{
+      text-align: center;
+    }
+  
+}
